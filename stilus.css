@@ -1,0 +1,111 @@
+body{
+    background-color: rgb(240, 226, 239);
+    margin: auto;
+}
+
+img{
+    max-width: 250px;
+    width: 100%;
+}
+
+main{
+    max-width: 1400px;
+    width: 90%;
+    margin: auto;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:    "h h h"
+                            "n n n"
+                            "a a as"
+                            "f f f";
+}
+
+header{
+    grid-area: h;
+}
+
+nav{
+    grid-area: n;
+}
+
+article{
+    grid-area: a;
+}
+
+aside{
+    grid-area: as;
+}
+
+footer{
+    grid-area: f;
+}
+
+a{
+    text-decoration: none;
+    color: brown;
+}
+
+ul{
+    padding: 0;
+}
+
+nav li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+section{
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+article section{
+    display: inline-block;
+    margin-top: 5px;
+}
+
+aside section li{
+    list-style-type: none;
+}
+
+div{
+    clear: both;
+}
+
+#tetel{
+    float: left;
+}
+
+#osszeg{
+    float: right;
+}
+
+#vegosszeg{
+    text-align: center;
+}
+
+@media screen and (max-width: 800px){
+    main{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:    "h h"
+                                "n n"
+                                "a a"
+                                "as as"
+                                "f f";
+    }
+}
+
+@media screen and (max-width: 400px){
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas:    "h"
+                                "n"
+                                "a"
+                                "as"
+                                "f";
+    }
+}
